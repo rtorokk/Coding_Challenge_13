@@ -37,4 +37,23 @@ addEmployee('Alice Johnson', 'Manager at Google');
 addEmployee('Bobby Brown', 'Developer at Microsoft');
 addEmployee('Frank Smith', 'Designer at Facebook');
 
+// Task 3: Converting NodeList to arrays for Bulk Updates
 
+function addBoarderToAllEmployees() {
+    const employeeCards = Array.from(document.querySelectorAll('.employee-card')); // Convert the NodeList to an array
+    employeeCards.forEach(employee => { // updates each employee card
+        employee.style.border = 'solid Hotpink'; // Add a pink border to each employee card
+    });
+}
+// Call the function to add a border to all employee cards
+addBoarderToAllEmployees(); // adds hot pink border to all employee cards
+
+// adding a background color to all employee cards (extra personal task)
+function addBackgroundToAllEmployees() {
+    const employeeCards = Array.from(document.querySelectorAll('.employee-card')); // Convert the NodeList to an array
+    employeeCards.forEach(employee => { // updates each employee card
+        employee.style.backgroundColor = 'pink'; // Add a light blue background to each employee card
+    });
+}
+// Call the function to add a pink background to all employee cards
+addBackgroundToAllEmployees(); // adds pink background to all employee cards
